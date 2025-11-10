@@ -58,7 +58,7 @@ class AztecBrowser(CoreBrowser):
         )
         if r and r.get('index'):
             return DashtecResponse(**r)
-        elif r.get('error') == "Validator not found.":
+        elif r.get('error') == "Validator not found." or r.get('error') == "Sequencer not found.":
             return DashtecResponse(status='not_found')
         else:
             raise Exception(f"can't get validator dashtec: {r}")
