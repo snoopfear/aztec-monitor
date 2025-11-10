@@ -99,7 +99,7 @@ def main_checker(
         node_version = server_browser.get_version_req(ip=acc.ip, port=acc.port)
         acc_report['version'] = node_version
 
-        if server_block_r.result.latest.number + 5 < latest_explorer_block:
+        if server_block_r.result.latest.number + 10 < latest_explorer_block:
             logger.warning(
                 f"#{acc.id} | {acc.address} | "
                 f"explorer height: {latest_explorer_block}, but the node is on {server_block_r.result.latest.number}."
