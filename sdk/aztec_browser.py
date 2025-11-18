@@ -54,7 +54,7 @@ class AztecBrowser(CoreBrowser):
     def get_dashtec_req(self, address: str) -> DashtecResponse:
         r = self.process_request(
             method="GET",
-            url=f"https://dashtec.xyz/api/validators/{address}?"
+            url=f"https://testnet.dashtec.xyz/api/validators/{address}?"
         )
         if r and r.get('index'):
             return DashtecResponse(**r)
@@ -78,7 +78,7 @@ class AztecBrowser(CoreBrowser):
     def get_queue_req(self, address: str) -> str:
         r = self.process_request(
             method="GET",
-            url=f"https://dashtec.xyz/api/validators/queue?page=1&limit=10&search={address}"
+            url=f"https://testnet.dashtec.xyz/api/validators/queue?page=1&limit=10&search={address}"
         )
         if r and r.get('validatorsInQueue'):
             return r.get('validatorsInQueue')[0].get('position', 999_999)
