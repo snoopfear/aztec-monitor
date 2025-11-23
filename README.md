@@ -6,7 +6,7 @@ Aztec Network validator monitor with automatic Telegram alerts and report genera
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/cyberomanov/aztec-monitor.git
+git clone https://github.com/snoopfear/aztec-monitor.git
 cd aztec-monitor
 ```
 
